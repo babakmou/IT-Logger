@@ -9,10 +9,10 @@
     },
     {
       "id": 2,
-      "message": "Fixed hard drive on workstation 002",
+      "message": "Fixed hard drive 512GB on workstation 002",
       "attention": false,
       "tech": "John Doe",
-      "date": "2019-05-31T16:18:04.245Z"
+      "date": "2023-09-25T20:23:10.800Z"
     },
     {
       "message": "1122 wireless down",
@@ -23,10 +23,10 @@
     },
     {
       "id": 4,
-      "message": "Workstation 026 is up and running",
-      "attention": false,
-      "tech": "Sara Wilson",
-      "date": "2019-05-31T19:57:35.544Z"
+      "message": "my test log",
+      "attention": true,
+      "tech": "Sam Smith",
+      "date": "2023-09-25T20:26:49.878Z"
     }
   ],
   "techs": [

@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
+import { addTech } from '../../actions/techActions';
+import PropTypes from 'prop-types';
 
-const AddTechModal = () => {
+const AddTechModal = ({ addTech }) => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
 
@@ -8,7 +11,14 @@ const AddTechModal = () => {
     if (firstName === '' || lastName === '') {
       window.M.toast({ html: 'Please fill first name and last name fields!' });
     } else {
-      console.log('modeal opened.');
+      addTech({
+        firstName,
+        lastName,
+      });
+      window.M.toast({
+        html: `${firstName} ${lastName} is added to technicians list!`,
+      });
+
       setFirstName('');
       setLastName('');
     }
@@ -58,4 +68,8 @@ const AddTechModal = () => {
   );
 };
 
-export default AddTechModal;
+AddTechModal.propTypes = {
+  addTech: PropTypes.func.isRequired,
+};
+
+export default connect(null, { addTech })(AddTechModal);
